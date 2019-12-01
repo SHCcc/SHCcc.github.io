@@ -23,6 +23,36 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="favicon.png">
+    <style type="text/css">
+
+      @-webkit-keyframes rotation {
+          from {
+              -webkit-transform: rotate(0deg);
+          }
+          to {
+              -webkit-transform: rotate(360deg);
+          }
+      }
+
+      #play {
+            -webkit-transform: rotate(360deg);
+            animation: rotation 8s linear infinite;
+            -moz-animation: rotation 8s linear infinite;
+            -webkit-animation: rotation 8s linear infinite;
+            -o-animation: rotation 8s linear infinite;
+        }
+
+        #play{
+          width: 30px;
+          height: 30px;
+          background: url('img/music.png');
+          background-size: cover;
+          position: absolute;
+          z-index: 999;
+          right: 10px;
+          top: 10px;
+        }
+    </style>
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -31,21 +61,6 @@
     <header class="header">
       <!-- Main Navbar-->
       <nav class="navbar navbar-expand-lg">
-        <div class="search-area">
-          <div class="search-area-inner d-flex align-items-center justify-content-center">
-            <div class="close-btn"><i class="icon-close"></i></div>
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-8">
-                <form action="#">
-                  <div class="form-group">
-                    <input type="search" name="search" id="search" placeholder="What are you looking for?">
-                    <button type="submit" class="submit"><i class="icon-search-1"></i></button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="container">
           <!-- Navbar Brand -->
           <div class="navbar-header d-flex align-items-center justify-content-between">
@@ -61,24 +76,17 @@
               </li>
             </ul>
             <div class="navbar-text"></div>
-</div>
+          </div>
         </div>
       </nav>
     </header>
+    
+    <audio id="audio" src="music/summer.mp3" autoplay loop>您的浏览器不支持 audio 标签。</audio>
     <!-- Hero Section-->
-    <section style="background: url(img/hero.jpg); background-size: cover; background-position: top center" class="hero">
-      <div class="container">
-        <div class="row">
-          <div  class="col-lg-7">
-            <h1>&nbsp;</h1>
-            <h1>&nbsp;</h1>
-            <h1>&nbsp;</h1>
-            <h1>&nbsp;</h1>
-            <h1>&nbsp;</h1>
-            <h1>每一个人都有一个香格里拉梦</h1>
-            <h1>2020年稻城约定你</h1>
-          </div>
-        </div><a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>
+    <section style="background: url(img/hero.jpg); background-size: 100% 100%;background-repeat: no-repeat;position: relative;idth: 100%;height: 800px;" class="hero">
+      <div id="play"></div>
+      <div style="background: rgba(41, 41, 41, 0.63);position: absolute;top: 60%;width: 100%;height: 150px;">
+        <h1 style="margin-left: 10%;top: 50%;margin-top: -50px;position: absolute;padding: 0;">每一个人都有一个香格里拉梦<br/>2020年稻城约定你</h1>
       </div>
     </section>
     <!-- Intro Section-->
@@ -92,18 +100,18 @@
             <h2 class="h5">要不要去 </h2>
             <h2 class="h5">那些听名字就觉得很美的地方 </h2>
             <h2 class="h5">稻城 亚丁 色达 </h2>
-<h2 class="h3">&nbsp;</h2>
-<h2 class="h5">等到明年春天 </h2>
-<h2 class="h5">在稻城冰雪融化的早晨 </h2>
-<h2 class="h5">在布满星辰斑斓的黄昏 </h2>
-<h2 class="h5">去见一见 </h2>
-<h2 class="h5">蓝色星球上的最后一片净土 </h2>
-<h2 class="h5">看白色的雪山 </h2>
-<h2 class="h5">看结冰的海子 </h2>
-<h2 class="h5">看新生的草地 </h2>
-<h2 class="h5">&nbsp;</h2>
-</div>
-                    </div>
+            <h2 class="h3">&nbsp;</h2>
+            <h2 class="h5">等到明年春天 </h2>
+            <h2 class="h5">在稻城冰雪融化的早晨 </h2>
+            <h2 class="h5">在布满星辰斑斓的黄昏 </h2>
+            <h2 class="h5">去见一见 </h2>
+            <h2 class="h5">蓝色星球上的最后一片净土 </h2>
+            <h2 class="h5">看白色的雪山 </h2>
+            <h2 class="h5">看结冰的海子 </h2>
+            <h2 class="h5">看新生的草地 </h2>
+            <h2 class="h5">&nbsp;</h2>
+          </div>
+        </div>
       </div>
     </section>
     <section style="background: url(img/hero-1.jpg); background-size: cover; background-position: top center" class="hero">
@@ -112,13 +120,13 @@
           <div  class="col-lg-7">    
             <p>&nbsp;</p>
               <h2 class="h5">积雪未融 </h2>
-<h2 class="h5">雪线还在半山腰 </h2>
-<h2 class="h5">是雪山最好看的时候 </h2>
-<h2 class="h5">雨季未到 </h2>
-<h2 class="h5">空气通透 </h2>
-<h2 class="h5">一眼可以望到天边 </h2>
-<h2 class="h5">其他时候隐匿在云层中的雪山 </h2>
-<h2 class="h5">此刻都毫无遮拦地把最美的样子展现在你面前 </h2>
+              <h2 class="h5">雪线还在半山腰 </h2>
+              <h2 class="h5">是雪山最好看的时候 </h2>
+              <h2 class="h5">雨季未到 </h2>
+              <h2 class="h5">空气通透 </h2>
+              <h2 class="h5">一眼可以望到天边 </h2>
+              <h2 class="h5">其他时候隐匿在云层中的雪山 </h2>
+              <h2 class="h5">此刻都毫无遮拦地把最美的样子展现在你面前 </h2>
             <p>&nbsp;&nbsp;</p>
           </div>
         </div>
@@ -130,20 +138,20 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-<h2 class="h5">我们将在最长的国道狂奔 </h2>
-<h2 class="h5">一路向西高歌 </h2>
-<h2 class="h5">在画里一样的景观中随时起飞 </h2>
-<h2 class="h5">有连绵的无名雪山草地 </h2>
-<h2 class="h5">原始的村庄 </h2>
-<h2 class="h5">也许会遭遇复杂的路况 </h2>
-<h2 class="h5">以及最突然和恶劣的天气 </h2>
-<h2 class="h5">就像似乎要印证付出总有回报 </h2>
-<h2 class="h5">看过那些向往已久的风景后 </h2>
-<h2 class="h5">定会觉得 </h2>
-<h2 class="h5">人间值得 </h2>
-<h2 class="h5">&nbsp;</h2>
-              </div>
-                    </div>
+            <h2 class="h5">我们将在最长的国道狂奔 </h2>
+            <h2 class="h5">一路向西高歌 </h2>
+            <h2 class="h5">在画里一样的景观中随时起飞 </h2>
+            <h2 class="h5">有连绵的无名雪山草地 </h2>
+            <h2 class="h5">原始的村庄 </h2>
+            <h2 class="h5">也许会遭遇复杂的路况 </h2>
+            <h2 class="h5">以及最突然和恶劣的天气 </h2>
+            <h2 class="h5">就像似乎要印证付出总有回报 </h2>
+            <h2 class="h5">看过那些向往已久的风景后 </h2>
+            <h2 class="h5">定会觉得 </h2>
+            <h2 class="h5">人间值得 </h2>
+            <h2 class="h5">&nbsp;</h2>
+          </div>
+        </div>
       </div>
     </section>
       
@@ -155,14 +163,14 @@
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-      <h2 class="h5">有银河陪伴的夜里 </h2>
-<h2 class="h5">是不会有寒冷和孤独的 </h2>
-<h2 class="h5">那些千万年前就死去的星星 </h2>
-<h2 class="h5">它们的光芒刚刚抵达我们的眼睛 </h2>
-<h2 class="h5">怎么能不去看看它们 </h2>
-<h2 class="h5">趁着月亮还没显现出来 </h2>
-<h2 class="h5">拍一晚上的星星 </h2>
-<h2 class="h5">都不会觉得累 </h2>
+              <h2 class="h5">有银河陪伴的夜里 </h2>
+              <h2 class="h5">是不会有寒冷和孤独的 </h2>
+              <h2 class="h5">那些千万年前就死去的星星 </h2>
+              <h2 class="h5">它们的光芒刚刚抵达我们的眼睛 </h2>
+              <h2 class="h5">怎么能不去看看它们 </h2>
+              <h2 class="h5">趁着月亮还没显现出来 </h2>
+              <h2 class="h5">拍一晚上的星星 </h2>
+              <h2 class="h5">都不会觉得累 </h2>
           </div>
         </div>
       </div>
@@ -173,61 +181,47 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-<h2 class="h5">这一路的风景 </h2>
-<h2 class="h5">不似清新小城的糖水 </h2>
-<h2 class="h5">鬼斧神工的大自然 </h2>
-<h2 class="h5">文字的描述是苍白无力的 </h2>
-<h2 class="h5">照片的描摹都显得薄弱 </h2>
-<h2 class="h5">只有你和我亲自去一趟 </h2>
-<h2 class="h5">经历这一切 </h2>
-<h2 class="h5">才能感受到那一份欣喜和感动 </h2>
-             </div>
-                    </div>
+            <h2 class="h5">这一路的风景 </h2>
+            <h2 class="h5">不似清新小城的糖水 </h2>
+            <h2 class="h5">鬼斧神工的大自然 </h2>
+            <h2 class="h5">文字的描述是苍白无力的 </h2>
+            <h2 class="h5">照片的描摹都显得薄弱 </h2>
+            <h2 class="h5">只有你和我亲自去一趟 </h2>
+            <h2 class="h5">经历这一切 </h2>
+            <h2 class="h5">才能感受到那一份欣喜和感动 </h2>
+          </div>
+        </div>
       </div>
     </section>
       
       
       <section style="background: url(img/hero-3.jpg); background-size: cover; background-position: top center" class="hero">
-      <div class="container">
-        <div class="row">
-          <div  class="col-lg-7">    
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-    <h2 class="h5">风景确实会一直都在 </h2>
-<h2 class="h5">但年少疯狂的心终将会消失 </h2>
-<h2 class="h5">在被生活打败前 </h2>
-<h2 class="h5">我们总会去到那些地方 </h2>
-<h2 class="h5">雪山洁白湖泊干净 </h2>
-<h2 class="h5">好像全世界都在唱情歌 </h2>
-<h2 class="h3">&nbsp;</h2>
+        <div class="container">
+          <div class="row">
+            <div  class="col-lg-7">    
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <h2 class="h5">风景确实会一直都在 </h2>
+              <h2 class="h5">但年少疯狂的心终将会消失 </h2>
+              <h2 class="h5">在被生活打败前 </h2>
+              <h2 class="h5">我们总会去到那些地方 </h2>
+              <h2 class="h5">雪山洁白湖泊干净 </h2>
+              <h2 class="h5">好像全世界都在唱情歌 </h2>
+              <h2 class="h3">&nbsp;</h2>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
               
-                           <section class="intro">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-
-<h2 class="h2">趁年轻 要出发&nbsp;路虽难 景如画</h2>
-<h2 class="h2"><br>
-</h2>
-<blockquote>&nbsp;
-              
-            </blockquote>
-            <p class="text-big">&nbsp;</p>
-          </div>
-        </div>
+      <div style="text-align: center;margin-top: 50px;">
+        <h2 class="h2">趁年轻 要出发&nbsp;路虽难 景如画</h2>
       </div>
-    </section>
-<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
-    <!-- Divider Section-->
-    <!-- Latest Posts -->
-    <!-- Newsletter Section-->
-    <!-- Gallery Section-->
+      <div style="text-align: center;margin-bottom: 20px;">
+        <video src="video/d4459fac495c3d4729332302214b2003.mp4" width="800" height="500" controls="controls">您的浏览器不支持播放视频</video>
+      </div>
+<!-- <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div> -->
     <section class="gallery no-padding">    
       <div class="row">
         <div class="mix col-lg-3 col-md-3 col-sm-6">
@@ -250,10 +244,21 @@
     </section>
     <!-- Page Footer-->    <!-- JavaScript files-->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/popper.js/umd/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
     <script src="vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/front.js"></script>
+    <script type="text/javascript">
+      $("#play").click(function () {
+        // var music = $(".audio");
+        var music = document.getElementById('audio'); 
+        if(music.paused){ //判断当前的状态是否为暂停，若是则点击播放，否则暂停
+          music.play();
+        }else{
+          music.pause();
+        }
+      })
+    </script>
   </body>
 </html>
